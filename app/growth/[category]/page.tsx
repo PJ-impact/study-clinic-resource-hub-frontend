@@ -7,7 +7,7 @@ export default async function GrowthPage(props: { params: Promise<{ category: st
   searchParams.set("category", params.category);
 
   const session = await auth();
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000";
+  const apiBase = process.env.API_BASE_URL || "http://localhost:5000";
 
   const headers: HeadersInit = {
     "Content-Type": "application/json",

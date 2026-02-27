@@ -9,7 +9,7 @@ interface DepartmentPageProps {
 export default async function DepartmentPage(props: DepartmentPageProps) {
   const params = await props.params;
   const searchParams = await props.searchParams;
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000";
+  const apiBase = process.env.API_BASE_URL || "http://localhost:5000";
   const session = await auth();
 
   const deptRes = await fetch(`${apiBase}/api/v1/departments/${params.slug}`, {
